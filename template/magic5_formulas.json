@@ -1,0 +1,38 @@
+{
+  "sheet": "magic5_harian",
+  "row3": {
+    "A3": "=IFERROR(SORT(UNIQUE(ARRAYFORMULA(TEXT(FILTER({campaign!$A$2:$A$5000;sales!$A$2:$A$5000},{campaign!$A$2:$A$5000;sales!$A$2:$A$5000}<>\"\"),\"yyyy-mm-dd\")))),\"\")",
+    "B3": "=BYROW($A$3:$A,LAMBDA(d,IF(d=\"\",\"\",SUMPRODUCT((TEXT(campaign!$A$2:$A$5000,\"yyyy-mm-dd\")=d)*campaign!$E$2:$E$5000))))",
+    "C3": "=BYROW($A$3:$A,LAMBDA(d,IF(d=\"\",\"\",SUMPRODUCT((TEXT(campaign!$A$2:$A$5000,\"yyyy-mm-dd\")=d)*campaign!$N$2:$N$5000))))",
+    "D3": "=BYROW($A$3:$A,LAMBDA(d,IF(d=\"\",\"\",SUMPRODUCT((TEXT(campaign!$A$2:$A$5000,\"yyyy-mm-dd\")=d)*campaign!$O$2:$O$5000))))",
+    "E3": "=BYROW($A$3:$A,LAMBDA(d,IF(d=\"\",\"\",SUMPRODUCT((TEXT(sales!$A$2:$A$5000,\"yyyy-mm-dd\")=d)*(sales!$B$2:$B$5000<>\"\")))))",
+    "F3": "=BYROW($A$3:$A,LAMBDA(d,IF(d=\"\",\"\",SUMPRODUCT((TEXT(sales!$A$2:$A$5000,\"yyyy-mm-dd\")=d)*(sales!$G$2:$G$5000=\"SUCCESS\")))))",
+    "G3": "=ARRAYFORMULA(IF($A$3:$A=\"\",\"\",IFERROR($F$3:$F/$D$3:$D,0)))",
+    "H3": "=BYROW($A$3:$A,LAMBDA(d,IF(d=\"\",\"\",SUMPRODUCT((TEXT(sales!$A$2:$A$5000,\"yyyy-mm-dd\")=d)*(sales!$G$2:$G$5000=\"SUCCESS\")*sales!$E$2:$E$5000))))",
+    "I3": "=ARRAYFORMULA(IF($A$3:$A=\"\",\"\",IFERROR($H$3:$H/$F$3:$F,0)))",
+    "J3": "=BYROW($A$3:$A,LAMBDA(d,IF(d=\"\",\"\",SUMPRODUCT((TEXT(sales!$A$2:$A$5000,\"yyyy-mm-dd\")=d)*(sales!$G$2:$G$5000=\"SUCCESS\")/(COUNTIFS(sales!$A$2:$A$5000,sales!$A$2:$A$5000,sales!$H$2:$H$5000,sales!$H$2:$H$5000,sales!$G$2:$G$5000,sales!$G$2:$G$5000)+(sales!$A$2:$A$5000=\"\"))))))",
+    "K3": "=ARRAYFORMULA(IF($A$3:$A=\"\",\"\",IFERROR($F$3:$F/$J$3:$J,0)))",
+    "L3": "=ARRAYFORMULA(IF($A$3:$A=\"\",\"\",$H$3:$H*parameter!$B$2))",
+    "M3": "=ARRAYFORMULA(IF($A$3:$A=\"\",\"\",$H$3:$H*parameter!$B$3))",
+    "N3": "=BYROW($A$3:$A,LAMBDA(d,IF(d=\"\",\"\",IF(parameter!$B$4=\"ya\",SUMPRODUCT((TEXT(sales!$A$2:$A$5000,\"yyyy-mm-dd\")=d)*(sales!$G$2:$G$5000=\"SUCCESS\")*sales!$E$2:$E$5000*sales!$I$2:$I$5000/100),0))))",
+    "O3": "=ARRAYFORMULA(IF($A$3:$A=\"\",\"\",$H$3:$H-$L$3:$L-$M$3:$M-$N$3:$N-$B$3:$B))",
+    "P3": "=ARRAYFORMULA(IF($A$3:$A=\"\",\"\",IFERROR($O$3:$O/$H$3:$H,0)))"
+  },
+  "row2": {
+    "B2": "=SUM(B3:B)",
+    "C2": "=SUM(C3:C)",
+    "D2": "=SUM(D3:D)",
+    "E2": "=SUM(E3:E)",
+    "F2": "=SUM(F3:F)",
+    "G2": "=IFERROR(F2/D2,0)",
+    "H2": "=SUM(H3:H)",
+    "I2": "=IFERROR(H2/F2,0)",
+    "J2": "=SUMPRODUCT((sales!$G$2:$G$5000=\"SUCCESS\")/(COUNTIFS(sales!$H$2:$H$5000,sales!$H$2:$H$5000,sales!$G$2:$G$5000,sales!$G$2:$G$5000)+(sales!$H$2:$H$5000=\"\")))",
+    "K2": "=IFERROR(F2/J2,0)",
+    "L2": "=SUM(L3:L)",
+    "M2": "=SUM(M3:M)",
+    "N2": "=SUM(N3:N)",
+    "O2": "=SUM(O3:O)",
+    "P2": "=IFERROR(O2/H2,0)"
+  }
+}
