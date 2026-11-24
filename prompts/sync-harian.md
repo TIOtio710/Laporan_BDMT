@@ -12,7 +12,7 @@ Jangan menyimpan token atau password di prompt ini.
 | `{{AFFILIATE_ID}}` | Kode affiliate BDMT, hanya dipakai untuk laporan (boleh dikosongkan) | `karyawan-ai` |
 
 ```text
-TUJUAN: tambahkan data KEMARIN (tanggal lokal WIB) milik BDMT {{NAMA_BDMT}} ke Google Sheet "Performa_Iklan_{{NAMA_BDMT}}" (spreadsheetId {{SPREADSHEET_ID}}, di folder Drive "BDMT Performa Iklan"). Hanya menulis ke sheet itu. Jangan mengubah iklan, kampanye, atau produk apa pun. Ini task terjadwal: tidak ada orang yang bisa ditanya, jadi jalankan sampai selesai lalu laporkan ringkas.
+TUJUAN: tambahkan data KEMARIN (tanggal lokal WIB) milik BDMT {{NAMA_BDMT}} ke Google Sheet "Performa_Iklan_{{NAMA_BDMT}}" (spreadsheetId {{SPREADSHEET_ID}}, di folder Drive "BDMT"). Hanya menulis ke sheet itu. Jangan mengubah iklan, kampanye, atau produk apa pun. Ini task terjadwal: tidak ada orang yang bisa ditanya, jadi jalankan sampai selesai lalu laporkan ringkas.
 
 STRUKTUR SHEET (header baris 1 JANGAN diubah; tab magic5_harian dan parameter berisi rumus/input manual, JANGAN ditulis; sheet ini dipakai dashboard "5 Magic Numbers"):
 - campaign: tanggal,campaign_id,campaign_name,status,spend,impressions,clicks,ctr_pct,cpm,cpc,reach,leads,cost_per_lead,link_clicks,landing_page_views,initiated_checkout_meta,purchases_meta,purchase_value_meta

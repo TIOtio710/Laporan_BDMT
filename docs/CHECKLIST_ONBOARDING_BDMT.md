@@ -4,7 +4,7 @@ Waktu: sekitar 30-45 menit. Cetak atau salin sebagai to-do.
 
 
 ## A. Disiapkan admin (satu kali per BDMT)
-- [ ] Buat folder/Shared Drive "BDMT Performa Iklan" (sekali untuk semua BDMT), bagikan ke BDMT sebagai viewer.
+- [ ] Buat folder/Shared Drive "BDMT" (sekali untuk semua BDMT), bagikan ke BDMT sebagai viewer.
 - [ ] Impor `template/Performa_Iklan_TEMPLATE.xlsx` ke Google Sheets, beri nama `_TEMPLATE_Performa_Iklan`, simpan di folder itu (sekali).
 - [ ] Pasang rumus tab `magic5_harian` dari `template/magic5_formulas.json` (sekali, di `_TEMPLATE`): tempel tiap rumus `row3` ke sel A3:P3 dan `row2` ke B2:P2 (atau minta Claude memasangnya dengan update_formulas). Setelah itu semua duplikat otomatis membawa rumusnya.
 - [ ] Duplikat template menjadi `Performa_Iklan_<NamaBDMT>` di folder yang sama.

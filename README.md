@@ -12,7 +12,7 @@ Ad account Meta (BDMT) ─┐
                         ├─ Claude scheduled task (akun Claude BDMT) ─> Performa_Iklan_<Nama> (Google Sheet)
 affiliate.id (BDMT)  ───┘                                                      │
                                                                                ▼
-                                          Folder Drive sentral "BDMT Performa Iklan" ─> dashboard bos
+                                          Folder Drive sentral "BDMT" ─> dashboard bos
 ```
 
 Prinsip desain: akun tidak digabung. Satu ad account bermasalah hanya menghentikan data BDMT itu, dashboard dan BDMT lain tetap jalan. Tidak ada token Meta terpusat.
@@ -30,7 +30,7 @@ Prinsip desain: akun tidak digabung. Satu ad account bermasalah hanya menghentik
 
 ## Mulai cepat (admin)
 
-1. Buat Shared Drive/folder "BDMT Performa Iklan".
+1. Buat Shared Drive/folder "BDMT".
 2. Impor `template/Performa_Iklan_TEMPLATE.xlsx` ke Google Sheets, simpan di folder itu sebagai `_TEMPLATE_Performa_Iklan`, lalu pasang rumus dari `template/magic5_formulas.json` ke tab `magic5_harian` (sekali; rumus BYROW/LAMBDA tidak bisa diimpor dari xlsx).
 3. Untuk tiap BDMT: duplikat template menjadi `Performa_Iklan_<Nama>`, beri akses editor ke BDMT itu saja.
 4. Kirim BDMT dua file: `prompts/sync-harian.md` dan `docs/CHECKLIST_ONBOARDING_BDMT.md`.
